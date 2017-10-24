@@ -1,0 +1,46 @@
+
+
+
+<div>
+    <div class="jumbotron text-center">
+
+        <div class="text-center">
+                <h1>Cheque List </h1>            
+        </div>
+    </div>
+    
+    <!-- <p>{{ tagline }}</p> -->
+    <div class = "row" ng-show="selectedCheque">
+        <div class = "col-sm-12">
+            <div class = "thumbnail col-sm-6" >
+                <img src = "{{selectedCheque.imgPath}}" alt = "Generic placeholder thumbnail">
+            </div>
+            <div class = "caption col-sm-6">
+                <h3>{{selectedCheque.label}}</h3>
+                <small>
+                    <div>Cheque Info</div>
+                    <div>Cheque Number</div>
+                    <div>Cheque Signed Date</div>
+                    <div>Cheque Amount</div>
+                </small>
+            </div>
+        </div>
+    </div>
+
+    <div class = "row">
+            <div class="text-left">
+                    <h3>{{tagline}}</h3>
+            </div>
+        <div ng-repeat="cheque in chequeList" ng-click="selectCheque(cheque)">
+            <div class = "col-sm-6 col-md-3">
+            <div class = "thumbnail" >
+                <img src = "{{cheque.imgPath}}" alt = "Generic placeholder thumbnail">
+            </div>
+            <div class = "caption">
+                <small>{{cheque.label}}</small>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</div>
